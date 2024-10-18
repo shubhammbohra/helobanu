@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift for Banu</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #FFC1CC; /* Baby pink background */
+            margin: 0;
+        }
+        #first, #second, #third {
+            display: none;
+            text-align: center;
+        }
+        img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #FF69B4; /* Hot pink color for text */
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #ff85c1;
+        }
+    </style>
+</head>
+<body>
+    <!-- First Tab -->
+    <div id="first">
+        <h1>HELLO BANU</h1>
+        <img src="images/banu1.jpg" alt="Banu Picture 1" id="img1"> <!-- Replace "image1.jpg" with your first image filename -->
+    </div>
+
+    <!-- Second Tab -->
+    <div id="second">
+        <h1>BANU KISKA H?</h1>
+        <img src="images/banu2.jpg" alt="Banu Picture 2" id="img2"> <!-- Replace "image2.jpg" with your second image filename -->
+        <button class="button" onclick="showThird()">SEE ANSWER</button>
+    </div>
+
+    <!-- Third Tab -->
+    <div id="third">
+        <h1>USKE SHUBHS KAAAA, WAWAWAWAAA!</h1>
+        <img src="images/banu3.jpg" alt="Banu Picture 3" id="img3"> <!-- Replace "image3.jpg" with your third image filename -->
+    </div>
+
+    <script>
+        // Show the first tab when the page loads
+        document.getElementById('first').style.display = 'block';
+
+        // When the first tab is clicked, show the second one
+        document.getElementById('first').onclick = function() {
+            document.getElementById('first').style.display = 'none';
+            document.getElementById('second').style.display = 'block';
+        };
+
+        // Function to show the third tab when "SEE ANSWER" is clicked
+        function showThird() {
+            document.getElementById('second').style.display = 'none';
+            document.getElementById('third').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
